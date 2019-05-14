@@ -1,0 +1,15 @@
+project/services/SuggestionService.class
+project/suggestions/SuggestorBySchedule.class
+project/suggestions/SuggestorByAge.class
+project/Application.class
+project/dal/mongo/ActivityRepository.class
+project/handlers/DbQueryHandler.class
+project/entities/mongo/Activity.class
+project/handlers/QueryHandler.class
+project/handlers/BaseQueryHandler.class
+project/suggestions/Suggestor.class
+project/suggestions/SuggestorByAddress.class
+project/entities/redis/Activity.class
+project/handlers/Query.class
+project/handlers/CacheQueryHandler.class
+project/dal/redis/RedisActivityRepository.class

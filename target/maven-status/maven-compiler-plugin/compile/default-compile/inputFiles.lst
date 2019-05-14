@@ -1,0 +1,15 @@
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/handlers/QueryHandler.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/entities/redis/Activity.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/suggestions/SuggestorByAge.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/suggestions/SuggestorBySchedule.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/services/SuggestionService.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/entities/mongo/Activity.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/dal/mongo/ActivityRepository.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/handlers/BaseQueryHandler.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/handlers/DbQueryHandler.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/handlers/Query.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/Application.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/suggestions/Suggestor.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/handlers/CacheQueryHandler.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/suggestions/SuggestorByAddress.java
+/Users/hy/IdeaProjects/aoopproject/src/main/java/project/dal/redis/RedisActivityRepository.java
