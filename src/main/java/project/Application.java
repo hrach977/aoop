@@ -65,14 +65,21 @@ public class Application implements CommandLineRunner {
 //
 //        project.entities.redis.Activity redisA = new project.entities.redis.Activity(824L, "par", "activName", 321L, 432L, "nalbandyan", 18);
 //        redisRepo.save(redisA);
-        System.out.println("fetching from redis");
-        project.entities.redis.Activity fetchedA = redisRepo.findById(824L).get();
-        System.out.println(fetchedA);
+
 
 //        Activity activity = new Activity(824L, "par", "activName", 321L, 432L, "nalbandyan", 18);
 //        repo.save(activity);
-        System.out.println("fetching activity");
-        Activity fetched = repo.findById(824L);
-        System.out.println(fetched);
+
+
+
+
+
+//        System.out.println("fetching from redis");
+//        project.entities.redis.Activity fetchedA = redisRepo.findById(824L).get();
+//        System.out.println(fetchedA);
+//
+//        System.out.println("fetching activity");
+//        Activity fetched = repo.findById(824L);
+//        System.out.println(fetched);
     }
 }

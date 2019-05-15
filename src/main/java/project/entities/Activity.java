@@ -3,6 +3,7 @@ package project.entities;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Activity {
+    @JsonProperty("id")
     private Long id;
     @JsonProperty("activity_name")
     private String activityName;
@@ -12,6 +13,7 @@ public class Activity {
     private Long startTime;
     @JsonProperty("end_time")
     private Long endTime;
+    @JsonProperty("address")
     private String address;
     @JsonProperty("age_threshold")
     private Integer ageThreshold;
@@ -45,6 +47,15 @@ public class Activity {
 //    public void setId(String id) {
 //        this.id = id;
 //    }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getActivityName() {
         return activityName;

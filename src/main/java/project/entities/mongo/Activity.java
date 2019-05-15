@@ -38,6 +38,16 @@ public class Activity {
 
     }
 
+    public Activity(project.entities.Activity activity) {
+        this.id = activity.getId();
+        this.activityName = activity.getActivityName();
+        this.organizationName = activity.getOrganizationName();
+        this.startTime = activity.getStartTime();
+        this.endTime = activity.getEndTime();
+        this.address = activity.getAddress();
+        this.ageThreshold = activity.getAgeThreshold();
+    }
+
     public Activity(Long id, String activityName, String organizationName, Long startTime, Long endTime, String address, Integer ageThreshold) {
         this.id = id;
         this.activityName = activityName;
