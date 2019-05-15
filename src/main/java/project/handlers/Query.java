@@ -8,6 +8,11 @@ public class Query {
 
     public Query() {}
 
+    public Query(String address, Integer age) {
+        this.address = address;
+        this.age = age;
+    }
+
     public Query(String address, Integer age, Long start, Long end) {
         this.address = address;
         this.age = age;
@@ -53,5 +58,15 @@ public class Query {
 
     public void setEnd(Long end) {
         this.end = end;
+    }
+
+    @Override
+    public String toString() {
+        return "Query{" +
+                "address='" + address + '\'' +
+                ", age=" + age +
+                ", start=" + start +
+                ", end=" + end +
+                '}';
     }
 }

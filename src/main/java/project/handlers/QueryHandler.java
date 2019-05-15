@@ -8,5 +8,6 @@ import java.util.List;
 //@Repository
 public interface QueryHandler {
     void setNext(QueryHandler queryHandler);
-    List<Activity> handleQuery(Query query);
+    List<Activity> handleQuery(String address);
+    List<Activity> handleQuery(Integer age);
 }

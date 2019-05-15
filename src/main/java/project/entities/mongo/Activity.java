@@ -2,16 +2,13 @@ package project.entities.mongo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.data.annotation.Id;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Document("activities")
 public class Activity {
-//    @Id
-//    private String id;
-//    private static Long counter = 0L;
 
     @Field("id")
     private Long id;
@@ -80,16 +77,6 @@ public class Activity {
                 ", ageThreshold=" + ageThreshold +
                 '}';
     }
-
-    //
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public void setId(String id) {
-//        this.id = id;
-//    }
-
 
     public Long getId() {
         return id;

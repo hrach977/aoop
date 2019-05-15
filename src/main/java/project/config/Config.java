@@ -3,6 +3,7 @@ package project.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import project.handlers.BaseQueryHandler;
 import project.handlers.CacheQueryHandler;
 import project.handlers.DbQueryHandler;
@@ -26,26 +27,31 @@ public class Config {
     @Bean
     public Map<String, Suggestor> getSuggestors() {
         return new HashMap<String, Suggestor>(){{
-            put("age", getSuggestorByAge());
-            put("address", getSuggetorByAddress());
-            put("schedule", getSuggestorBySchedule());
+//            put("age", getSuggestorByAge());
+//            put("address", getSuggetorByAddress());
+//            put("schedule", getSuggestorBySchedule());
+            put("age", new SuggestorByAge());
+            put("address", new SuggestorByAddress());
         }};
     }
 
-    @Bean
-    public Suggestor getSuggestorByAge() {
-        return new SuggestorByAge();
-    }
-
-    @Bean
-    Suggestor getSuggetorByAddress() {
-        return new SuggestorByAddress();
-    }
-
-    @Bean
-    public Suggestor getSuggestorBySchedule() {
-        return new SuggestorByAddress();
-    }
+//    @Bean
+//    @Order(0)
+//    public Suggestor getSuggestorByAge() {
+//        return new SuggestorByAge();
+//    }
+//
+//    @Bean
+//    @Order(1)
+//    Suggestor getSuggetorByAddress() {
+//        return new SuggestorByAddress();
+//    }
+//
+//    @Bean
+//    @Order(2)
+//    public Suggestor getSuggestorBySchedule() {
+//        return new SuggestorByAddress();
+//    }
 
     @Bean("base")
     public BaseQueryHandler getQueryHandler() {

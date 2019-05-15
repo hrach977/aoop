@@ -10,5 +10,4 @@ import java.util.List;
 public interface RedisActivityRepository extends CrudRepository<Activity, Long> {
     List<Activity> findByAddress(String address);
     List<Activity> findByAgeThresholdGreaterThanEqual(int age);
-//    Activity findById(Long id);
 }

@@ -64,14 +64,14 @@ public class Activity {
         this.address = address;
         this.ageThreshold = ageThreshold;
     }
-//
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public void setId(String id) {
-//        this.id = id;
-//    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getActivityName() {
         return activityName;
@@ -134,16 +134,4 @@ public class Activity {
                 '}';
     }
 
-    //    @Override
-//    public String toString() {
-//        return "Activity{" +
-//                "id='" + id + '\'' +
-//                ", activityName='" + activityName + '\'' +
-//                ", organizationName='" + organizationName + '\'' +
-//                ", startTime=" + startTime +
-//                ", endTime=" + endTime +
-//                ", address='" + address + '\'' +
-//                ", ageThreshold=" + ageThreshold +
-//                '}';
-//    }
 }
