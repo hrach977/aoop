@@ -15,6 +15,14 @@ public class Query {
         this.end = end;
     }
 
+    public boolean containsAddress() {
+        return address != null;
+    }
+
+    public boolean containsAge() {
+        return age != null;
+    }
+
     public String getAddress() {
         return address;
     }
