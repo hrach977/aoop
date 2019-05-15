@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import project.entities.Activity;
 import project.services.SuggestionService;
 
 @RestController
@@ -19,7 +20,7 @@ public class SuggestionController {
     }
 
     @GetMapping("/suggest")
-    public String getSuggestion(@RequestParam(required = false) String by) {
-        return "Hey there " + by;
+    public Activity getSuggestion(@RequestParam(required = false) String by) {
+        return new Activity();
     }
 }

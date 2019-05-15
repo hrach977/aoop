@@ -32,9 +32,10 @@ public class CacheQueryHandler extends BaseQueryHandler {
             }
             return res;
         }
-        if (next != null) {
-            return next.handleQuery(query);
-        }
-        return null;
+//        if (next != null) {
+//            return next.handleQuery(query);
+//        }
+//        return null;
+       return super.handleQuery(query);
     }
 }

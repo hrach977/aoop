@@ -22,6 +22,10 @@ public class BaseQueryHandler implements QueryHandler{
     }
 
     public List<Activity> handleQuery(Query query) {
-        return next.handleQuery(query);
+//      return next.handleQuery(query);
+        if (next != null) {
+            next.handleQuery(query);
+        }
+        return null;
     }
 }
