@@ -9,8 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Document("activities")
 public class Activity {
-    @Id
-    private String id;
+//    @Id
+//    private String id;
+//    private static Long counter = 0L;
+
+    @Field("id")
+    private Long id;
     @Field("activity_name")
     @JsonProperty("activity_name")
     private String activityName;
@@ -34,7 +38,8 @@ public class Activity {
 
     }
 
-    public Activity(String activityName, String organizationName, Long startTime, Long endTime, String address, Integer ageThreshold) {
+    public Activity(Long id, String activityName, String organizationName, Long startTime, Long endTime, String address, Integer ageThreshold) {
+        this.id = id;
         this.activityName = activityName;
         this.organizationName = organizationName;
         this.startTime = startTime;
@@ -43,11 +48,44 @@ public class Activity {
         this.ageThreshold = ageThreshold;
     }
 
-    public String getId() {
+    public Activity(String activityName, String organizationName, Long startTime, Long endTime, String address, Integer ageThreshold) {
+//        this.id = ++counter;
+        this.activityName = activityName;
+        this.organizationName = organizationName;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.address = address;
+        this.ageThreshold = ageThreshold;
+    }
+
+    @Override
+    public String toString() {
+        return "Activity{" +
+                "id=" + id +
+                ", activityName='" + activityName + '\'' +
+                ", organizationName='" + organizationName + '\'' +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", address='" + address + '\'' +
+                ", ageThreshold=" + ageThreshold +
+                '}';
+    }
+
+    //
+//    public String getId() {
+//        return id;
+//    }
+//
+//    public void setId(String id) {
+//        this.id = id;
+//    }
+
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

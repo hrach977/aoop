@@ -3,7 +3,7 @@ package project.entities;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Activity {
-    private String id;
+    private Long id;
     @JsonProperty("activity_name")
     private String activityName;
     @JsonProperty("organization_name")
@@ -28,23 +28,23 @@ public class Activity {
         this.ageThreshold = mongoActivity.getAgeThreshold();
     }
 
-    public Activity(project.entities.redis.Activity redisActivity) {
-        this.id = redisActivity.getId();
-        this.activityName = redisActivity.getActivityName();
-        this.organizationName = redisActivity.getOrganizationName();
-        this.startTime = redisActivity.getStartTime();
-        this.endTime = redisActivity.getEndTime();
-        this.address = redisActivity.getAddress();
-        this.ageThreshold = redisActivity.getAgeThreshold();
-    }
+//    public Activity(project.entities.redis.Activity redisActivity) {
+//        this.id = redisActivity.getId();
+//        this.activityName = redisActivity.getActivityName();
+//        this.organizationName = redisActivity.getOrganizationName();
+//        this.startTime = redisActivity.getStartTime();
+//        this.endTime = redisActivity.getEndTime();
+//        this.address = redisActivity.getAddress();
+//        this.ageThreshold = redisActivity.getAgeThreshold();
+//    }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+//    public String getId() {
+//        return id;
+//    }
+//
+//    public void setId(String id) {
+//        this.id = id;
+//    }
 
     public String getActivityName() {
         return activityName;

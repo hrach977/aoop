@@ -28,7 +28,7 @@ public class CacheQueryHandler extends BaseQueryHandler {
         if (result != null && result.size()!=0) {
             List<Activity> res = new LinkedList<>();
             for (project.entities.redis.Activity a : result) {
-                res.add(new Activity(a));
+//                res.add(new Activity(a));
             }
             return res;
         }

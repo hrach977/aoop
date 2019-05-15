@@ -10,4 +10,5 @@ import java.util.List;
 public interface ActivityRepository extends MongoRepository<Activity, String> {
     List<Activity> findByAddress(String address);
     List<Activity> findByAgeThresholdGreaterThanEqual(int age);
+    Activity findById(Long id);
 }

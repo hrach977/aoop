@@ -39,10 +39,11 @@ public class Application implements CommandLineRunner {
 //        Activity activity = new Activity("anun", "zal", 123L, 321L, "komitas", 21);
 //        repo.save(activity);
 //        Activity res = repo.findOne();
-        List<Activity> res = repo.findByAddress("komitas");
-        project.entities.Activity real = new project.entities.Activity(res.get(0));
-        System.out.println("From MONGO");
-        System.out.println(real);
+//
+//        List<Activity> res = repo.findByAddress("komitas");
+//        project.entities.Activity real = new project.entities.Activity(res.get(0));
+//        System.out.println("From MONGO");
+//        System.out.println(real);
 
 //        project.entities.redis.Activity redActivity = new project.entities.redis.Activity("anun", "zal", 123L, 321L, "komitas", 21);
 //        redisRepo.save(redActivity);
@@ -52,13 +53,26 @@ public class Application implements CommandLineRunner {
 //        project.entities.Activity redisReal = new project.entities.Activity(redisRes.get(0));
 //        project.entities.redis.Activity redisRes = redisRepo.findById("5187ddda-f54c-4caa-acc1-7f19bc108e12").get();
 
-        List<project.entities.redis.Activity> redisAll = (List<project.entities.redis.Activity>) redisRepo.findAll();
-        System.out.println(redisAll.size());
-
-        System.out.println("From REDIS");
-//        System.out.println(redisAll.get(0));
-        redisAll.forEach(System.out::println);
+//        List<project.entities.redis.Activity> redisAll = (List<project.entities.redis.Activity>) redisRepo.findAll();
+//        System.out.println(redisAll.size());
+//
+//        System.out.println("From REDIS");
+////        System.out.println(redisAll.get(0));
+//        redisAll.forEach(System.out::println);
 
 //        List<project.entities.redis.Activity>
+        //        Activity activity = new Activity("anun", "zal", 123L, 321L, "komitas", 21);
+//
+//        project.entities.redis.Activity redisA = new project.entities.redis.Activity(824L, "par", "activName", 321L, 432L, "nalbandyan", 18);
+//        redisRepo.save(redisA);
+        System.out.println("fetching from redis");
+        project.entities.redis.Activity fetchedA = redisRepo.findById(824L).get();
+        System.out.println(fetchedA);
+
+//        Activity activity = new Activity(824L, "par", "activName", 321L, 432L, "nalbandyan", 18);
+//        repo.save(activity);
+        System.out.println("fetching activity");
+        Activity fetched = repo.findById(824L);
+        System.out.println(fetched);
     }
 }

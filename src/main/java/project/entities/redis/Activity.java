@@ -8,10 +8,12 @@ import org.springframework.data.redis.core.RedisHash;
 @RedisHash("activities")
 public class Activity {
 
-    private static final String KEY = "activities";
-
-    @Id
-    private String id;
+//    private static final String KEY = "activities";
+//
+//    @Id
+//    private String id;
+    @Field("id")
+    private Long id;
     @Field("activity_name")
     @JsonProperty("activity_name")
     private String activityName;
@@ -34,7 +36,8 @@ public class Activity {
     public Activity() {
     }
 
-    public Activity(String activityName, String organizationName, Long startTime, Long endTime, String address, Integer ageThreshold) {
+    public Activity(Long id, String activityName, String organizationName, Long startTime, Long endTime, String address, Integer ageThreshold) {
+        this.id = id;
         this.activityName = activityName;
         this.organizationName = organizationName;
         this.startTime = startTime;
@@ -43,13 +46,22 @@ public class Activity {
         this.ageThreshold = ageThreshold;
     }
 
-    public String getId() {
-        return id;
+    public Activity(String activityName, String organizationName, Long startTime, Long endTime, String address, Integer ageThreshold) {
+        this.activityName = activityName;
+        this.organizationName = organizationName;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.address = address;
+        this.ageThreshold = ageThreshold;
     }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+//
+//    public String getId() {
+//        return id;
+//    }
+//
+//    public void setId(String id) {
+//        this.id = id;
+//    }
 
     public String getActivityName() {
         return activityName;
@@ -102,7 +114,7 @@ public class Activity {
     @Override
     public String toString() {
         return "Activity{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", activityName='" + activityName + '\'' +
                 ", organizationName='" + organizationName + '\'' +
                 ", startTime=" + startTime +
@@ -111,4 +123,17 @@ public class Activity {
                 ", ageThreshold=" + ageThreshold +
                 '}';
     }
+
+    //    @Override
+//    public String toString() {
+//        return "Activity{" +
+//                "id='" + id + '\'' +
+//                ", activityName='" + activityName + '\'' +
+//                ", organizationName='" + organizationName + '\'' +
+//                ", startTime=" + startTime +
+//                ", endTime=" + endTime +
+//                ", address='" + address + '\'' +
+//                ", ageThreshold=" + ageThreshold +
+//                '}';
+//    }
 }
